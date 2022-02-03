@@ -46,12 +46,15 @@
                     </div>
                 </div>
                 <div class="form-group mt-4">
-                    <textarea type="text" id="other_requirement" formControlName="other_requirement" class="form-control form-field" maxlength="100" [ngClass]="{ 'is-invalid': submitted && f.other_requirement?.errors }" placeholder="Other Requirements"></textarea>
+                    <textarea type="text" id="other_requirement"
+                     formControlName="other_requirement" class="form-control form-field" maxlength="100"
+                      [ngClass]="{ 'is-invalid': submitted && f.other_requirement?.errors }" placeholder="Other Requirements"></textarea>
                 </div>
 
                 <div class="form-group mt-4">
                     <input id="purchase_form" hidden value=true formControlName="purchase_form" class="form-control form-field" type="text" [ngClass]="{ 'is-invalid': submitted && f.purchase_form?.errors }" placeholder="purchase_form">
                     <div *ngIf="submitted && f.purchase_form.errors" class="invalid-feedback">
+
                         <div *ngIf="f.purchase_form.errors.required">hidden-purchase form</div>
                     </div>
                 </div>
